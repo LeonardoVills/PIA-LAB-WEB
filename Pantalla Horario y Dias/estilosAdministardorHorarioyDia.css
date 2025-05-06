@@ -1,0 +1,38 @@
+#datepicker {
+  transform: scale(1.15);
+  transform-origin: top center;
+  display: inline-block;
+}
+
+
+#modificar-dias-btn {
+  margin-bottom: 1.5rem;
+  transform: translateX(-15px);
+}
+.nav-link:hover {
+  background-color: black;
+  border-radius: 5px;
+  color: white !important;
+}
+footer {
+  background: #fff;
+  padding: 1rem 0;
+}
+footer .social a {
+  color: #333;
+  font-size: 1.25rem;
+  margin-right: 1rem;
+  transition: color .2s;
+}
+footer .social a:hover {
+  color: #007bff;
+}
+footer .footer-links a {
+  color: #555;
+  text-decoration: none;
+  margin: 0 .5rem;
+  transition: color .2s;
+}
+footer .footer-links a:hover {
+  color: #007bff;
+}
