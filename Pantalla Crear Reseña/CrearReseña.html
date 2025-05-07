@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrearReseña</title>
+    <link rel="stylesheet" href="CSS/General.css">
+    <link rel="stylesheet" href="CSS/CrearReseña.css">
+    <link rel="stylesheet" href="Lib/Bootstrap/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>  
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-flex w-100">
+          <div class="d-flex justify-content-center flex-grow-1">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Principal</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Cuidado y Consejos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Citas</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Reseñas</a></li>
+            </ul>
+          </div>
+          <div class="d-flex justify-content-end">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Empleados</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <main>
+        <article>
+            <div id="R1">
+                <form>
+                    <p class="clasificacion">
+                      <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                      --><label for="radio1">★</label><!--
+                      --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                      --><label for="radio2">★</label><!--
+                      --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                      --><label for="radio3">★</label><!--
+                      --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                      --><label for="radio4">★</label><!--
+                      --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                      --><label for="radio5">★</label>
+                    </p>
+                  </form>
+                <h2>Reseña</h2>
+                <p>Deja tu calificación</p>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Nombre</span>
+                    <input type="text" class="form-control" placeholder="Escriba su nombre aquí" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                <input type="date" name="" id="fechaReseña">
+            </div>
+    
+           <div id="R2">
+                <div class="mb-3">
+                    <p>Déjanos tus comentarios</p>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+           </div>
+        </article>
+
+        <div id="btnAqui">
+            <button id="btnCrear" type="button" class="btn btn-primary btn-lg">Subir Reseña</button>
+        </div>
+    </main>
+
+    <div class="bg-white pt-1 pb-2">
+      <div class="text-center mb-2">
+        <i class="bi bi-x fs-6 mx-2"></i>
+        <i class="bi bi-instagram fs-6 mx-2"></i>
+        <i class="bi bi-youtube fs-6 mx-2"></i>
+        <i class="bi bi-linkedin fs-6 mx-2"></i>
+      </div>
+      <footer>
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+          <div class="social mb-2 mb-md-0">
+            <a href="#" aria-label="Twitter"><i class="fab fa-x"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <div class="text-center text-md-end">
+            <small class="d-block">&copy; 2025 Todos los derechos reservados</small>
+            <div class="footer-links">
+              <a href="#">Privacidad</a> / 
+              <a href="#">Condiciones de Uso</a> / 
+              <a href="#">Cookies</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  
+
+    <script src="Lib/Bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="Lib/Jquery/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#btnCrear').on('click', function () {
+              window.open("Reseñas.html");
+            });
+          });
+    </script>
+    
+</body>
+</html>

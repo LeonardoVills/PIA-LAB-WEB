@@ -1,0 +1,113 @@
+#form {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+}
+   
+#form label {
+    font-size: 20px;
+}
+  
+input[type="radio"] {
+    display: none;
+}
+  
+label {
+    color: grey;
+}
+  
+.clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    font-size: xx-large;
+    text-align: left;
+}
+  
+label:hover,label:hover ~ label {
+    color: orange;
+}
+  
+input[type="radio"]:checked ~ label {
+    color: orange;
+}
+
+article{
+    margin: auto;
+    width: 50%;
+    padding: 2%;
+    background-color: white;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+main{
+    padding-top: 7%;
+    padding-bottom: 2%;
+}
+
+#R1{
+    margin-inline-start: auto;
+    margin-right: 5%;
+    width: auto;
+}
+
+#R2{
+    margin-inline-end: auto;
+    width: auto;
+    margin-left: 5%;
+}
+
+#R1,#R2{
+    display:inline-block;
+    border: 2px solid var(--colorSecundario);
+    padding: 2%;
+    border-radius: 12px;
+}
+
+#btnCrear{
+    background-color: var(--colorSecundario);
+    border-color: var(--colorSecundario);
+}
+
+#btnAqui{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px;
+    position: sticky;
+    z-index: 100;
+    bottom: 10px;
+}
+
+.nav-link:hover {
+    background-color: black;
+    border-radius: 5px;
+    color: white !important;
+  }
+
+footer {
+    background: #fff;
+    padding: 0.5rem 0; 
+}
+
+footer .social a {
+    color: #333;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    transition: color .2s;
+}
+
+footer .social a:hover {
+    color: #007bff;
+}
+  
+footer .footer-links a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 .5rem;
+    transition: color .2s;
+}
+
+footer .footer-links a:hover {
+    color: #007bff;
+}
