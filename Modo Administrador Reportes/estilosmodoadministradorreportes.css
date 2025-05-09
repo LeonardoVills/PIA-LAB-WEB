@@ -1,0 +1,211 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    background: rgb(0, 157, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .nav-link:hover {
+    background-color: black;
+    border-radius: 5px;
+    color: white !important;
+  }
+  
+  footer {
+    background: #fff;
+    padding: 1rem 0;
+    margin-top: 0;
+    width: 100%;
+  }
+  
+  footer .social a {
+    color: #333;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    transition: color 0.2s;
+  }
+  
+  footer .social a:hover {
+    color: #007bff;
+  }
+  
+  footer .footer-links a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.2s;
+  }
+  
+  footer .footer-links a:hover {
+    color: #007bff;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  main h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .comment-admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    width: 800px;
+    margin-top: 20px;
+  }
+  
+  .filters {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .filters h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .filters div {
+    margin-bottom: 10px;
+  }
+  
+  .filters input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .comment-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .comment-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .comment-box {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .comment-box p {
+    margin: 5px 0;
+  }
+  
+  .comment-details input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .comment-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .comment-details .switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+  }
+  
+  .comment-details .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .comment-details .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .comment-details .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  .comment-details .switch input:checked + .slider {
+    background-color: #007bff;
+  }
+  
+  .comment-details .switch input:checked + .slider:before {
+    transform: translateX(14px);
+  }
+
+  .report-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    width: 800px;
+    margin-top: 20px;
+  }
+  
+  .report-container h2, .report-container h3 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .report-container .form-control {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .report-container #datepicker-desde,
+  .report-container #datepicker-hasta,
+  .report-container #datepicker-comparacion-desde,
+  .report-container #datepicker-comparacion-hasta {
+    margin: 0 auto;
+  }
+  
+  .report-container .btn {
+    margin-top: 20px;
+  }

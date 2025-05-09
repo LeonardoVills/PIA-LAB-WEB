@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modo Administrador</title>
+  <link rel="stylesheet" href="estilomodoadministradorcomentarios.css">
+  <link rel="stylesheet" href="../Libs/fontawesome-free-6.7.2-web/css/all.min.css"> 
+  <link rel="stylesheet" href="../Libs/Bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../Libs/Bootstrap/bootstrap-icons.css">
+  <style>
+   body {
+    background-color: #e8e8e8;
+  }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="d-flex w-100">
+        <div class="d-flex justify-content-center flex-grow-1">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Principal</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Cuidado y Consejos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Citas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Reseñas</a></li>
+          </ul>
+        </div>
+        <div class="d-flex justify-content-end">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Empleados</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</nav>
+
+
+
+<main class="d-flex flex-column align-items-center mt-5">
+  <h1>Modo Administrador : Comentarios</h1>
+  <div class="comment-admin-container">
+    <div class="filters">
+      <h2>Filtros Búsqueda:</h2>
+      <div>
+        <input type="checkbox" id="filter-4-stars" checked>
+        <label for="filter-4-stars">4 estrellas o más</label>
+      </div>
+      <div>
+        <input type="checkbox" id="filter-3-stars" checked>
+        <label for="filter-3-stars">3 estrellas o menos</label>
+      </div>
+      <div>
+        <label for="specific-search">Búsqueda específica</label>
+        <input type="text" id="specific-search" placeholder="Introduzca búsqueda">
+      </div>
+    </div>
+
+    <div class="comment-details">
+      <h2>Comentario de Cliente:</h2>
+      <div class="comment-box">
+        <p><strong>Reseña</strong></p>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>Roberto N</p>
+        <p>28/08/2024</p>
+      </div>
+      <div>
+        <label for="comment-input">Déjanos tu comentario</label>
+        <input type="text" id="comment-input" placeholder="Me encantó el servicio">
+      </div>
+      <div>
+        <h3>Estado de Comentario</h3>
+        <p>Activo</p>
+        <p>Si desactiva el comentario, este será borrado</p>
+        <label class="switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+<footer class="mt-5 border-top pt-4 pb-3">  
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">  
+    <div class="social mb-3 mb-md-0">  
+      <a href="#" aria-label="Twitter"><i class="fab fa-x"></i></a>  
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>  
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>  
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>  
+    </div>  
+    <div class="text-center text-md-end">  
+      <small class="d-block">&copy; 2025 Todos los derechos reservados</small>  
+      <div class="footer-links">  
+        <a href="#">Privacidad</a> /  
+        <a href="#">Condiciones de Uso</a> /  
+        <a href="#">Cookies</a>  
+      </div>  
+    </div>  
+  </div>  
+</footer>  
+
+<script src="../Libs/Bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
