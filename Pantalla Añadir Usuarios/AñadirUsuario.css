@@ -1,0 +1,28 @@
+main{
+    padding-top: 2%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+#tarjetaDatos,input{
+    border: 2px solid #2f3635;
+    border-radius: 12px;
+}
+
+#btnCrear{
+    background-color: #2f3635;
+    color: white;
+    border-color: #2f3635;
+    margin-top: 20px;
+}
+
+#tarjetaDatos{
+    padding-top:  10px;
+    padding-bottom: 15px;
+    margin: auto;
+    max-width: 300px;
+}
+
+form *{
+    margin: 5px;
+}
