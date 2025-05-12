@@ -1,0 +1,28 @@
+:root{
+    --colorPrincipal: #32ade6;
+    --colorSecundario: #181e21;
+}
+
+/*img{
+   max-width: 100%; La imagen nunca será más grande de lo que debe y estará al 100 cuando pueda
+}*/
+
+.datos{
+    border: solid var(--colorSecundario);
+    padding: 8px;
+    display: flex;
+    border-radius: 12px;
+}
+
+article{
+    margin: auto;
+    width: 50%;
+    padding: 2%;
+    background-color: white;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+main{
+    padding: 10px;
+}

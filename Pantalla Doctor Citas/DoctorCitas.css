@@ -1,0 +1,57 @@
+#barraFiltros {
+    width: 250px;
+    min-height: calc(100vh - 56px); /* para que tenga altura completa menos la altura del navbar */
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+  }
+
+  article .border {
+    background-color: #f8f9fa; /* color claro para los campos */
+  }
+
+  .nav-link:hover {
+    background-color: black;
+    border-radius: 5px;
+    color: white !important;
+  }
+
+footer {
+    background: #fff;
+    padding: 0.5rem 0; 
+}
+
+footer .social a {
+    color: #333;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    transition: color .2s;
+}
+
+footer .social a:hover {
+    color: #007bff;
+}
+  
+footer .footer-links a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 .5rem;
+    transition: color .2s;
+}
+
+footer .footer-links a:hover {
+    color: #007bff;
+}
+
+label:hover,label:hover ~ label {
+    color: orange;
+}
+  
+input[type="radio"]:checked ~ label {
+    color: orange;
+}
+
+h1{
+    text-align: center;
+}
