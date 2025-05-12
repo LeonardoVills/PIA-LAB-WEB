@@ -1,0 +1,135 @@
+#Imagen1 {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+  }
+  h2{
+    text-align: center;
+  }
+  .nav-link:hover {
+    background-color: black;
+    border-radius: 5px;
+    color: white !important;
+  }
+  body{
+    background: rgb(0, 157, 255);
+  }
+  
+    .nav-link:hover {
+      background-color: black;
+      border-radius: 5px;
+      color: white !important;
+  }
+    .form-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 30px auto;
+    }
+    .btn-agendar {
+      background-color: #000;
+      color: #fff;
+    }
+    .alerta {
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+  
+    .social-icons i {
+      font-size: 20px;
+      margin: 0 5px;
+      color: white;
+    }
+    footer {
+      background: #fff;
+      padding: 1rem 0;
+    }
+    footer .social a {
+      color: #333;
+      font-size: 1.25rem;
+      margin-right: 1rem;
+      transition: color .2s;
+    }
+    footer .social a:hover {
+      color: #007bff;
+    }
+    footer .footer-links a {
+      color: #555;
+      text-decoration: none;
+      margin: 0 .5rem;
+      transition: color .2s;
+    }
+    footer .footer-links a:hover {
+      color: #007bff;
+    }
+
+    .about-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 900px; 
+        margin: 50px auto; 
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        gap: 20px; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      .about-image {
+        width: 40%; 
+        max-width: 300px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+      
+      .about-text {
+        flex: 1; 
+        text-align: left;
+      }
+      
+      .about-text h2, .about-text h3 {
+        color: #333;
+        margin-bottom: 10px;
+      }
+      
+      .about-text p {
+        color: #555;
+        line-height: 1.6;
+        font-size: 14px; 
+      }
+      html, body {
+  height: 100%; 
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column; 
+}
+
+footer {
+  margin-top: auto; 
+}
+html, body {
+    height: 100%; 
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+  }
+  
+  footer {
+    background: #fff;
+    padding: 1rem 0;
+    margin-top: 0; 
+    width: 100%; 
+  }

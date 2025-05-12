@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="../Libs/Bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="../Libs/Bootstrap/bootstrap-icons.css">
   <link rel="stylesheet" href="../Libs/Bootstrap/bootstrap-datepicker.min.css">
+  <script src="../Libs/Jquery/jquery-3.7.1.min.js"></script>
+  <script src="../Libs/Bootstrap/bootstrap-datepicker.min.js"></script>
+  <script src="../Libs/Bootstrap/bootstrap-datepicker.es.min.js"></script>
   <style>
    body {
     background-color: #e8e8e8;
@@ -71,27 +74,37 @@
       </div>
     </div>
 
-    <div class="row mt-4">
-      <div class="col-md-6">
+    <div class="row mt-4">      <div class="col-md-6">
         <h3>Desde...</h3>
-        <div id="datepicker-desde"></div>
+        <div class="input-group">
+          <input type="text" class="form-control" id="datepicker-desde" placeholder="Seleccione una fecha">
+          <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+        </div>
       </div>
       <div class="col-md-6">
         <h3>Hasta...</h3>
-        <div id="datepicker-hasta"></div>
+        <div class="input-group">
+          <input type="text" class="form-control" id="datepicker-hasta" placeholder="Seleccione una fecha">
+          <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+        </div>
       </div>
     </div>
 
     <div class="row mt-4">
       <h3>Comparación con otro período</h3>
-      <p>Si se activa, seleccione otro período de tiempo para comparar con el período anteriormente seleccionado</p>
-      <div class="col-md-6">
+      <p>Si se activa, seleccione otro período de tiempo para comparar con el período anteriormente seleccionado</p>      <div class="col-md-6">
         <h3>Desde...</h3>
-        <div id="datepicker-comparacion-desde"></div>
+        <div class="input-group">
+          <input type="text" class="form-control" id="datepicker-comparacion-desde" placeholder="Seleccione una fecha">
+          <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+        </div>
       </div>
       <div class="col-md-6">
         <h3>Hasta...</h3>
-        <div id="datepicker-comparacion-hasta"></div>
+        <div class="input-group">
+          <input type="text" class="form-control" id="datepicker-comparacion-hasta" placeholder="Seleccione una fecha">
+          <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+        </div>
       </div>
     </div>
 
@@ -128,11 +141,31 @@
 <script src="../Libs/Bootstrap/bootstrap.bundle.min.js"></script>
 <script>
   $(document).ready(function () {
-    $('#datepicker-desde, #datepicker-hasta, #datepicker-comparacion-desde, #datepicker-comparacion-hasta').datepicker({
+    // Configuración común para todos los datepickers
+    const commonConfig = {
       format: 'dd/mm/yyyy',
       todayHighlight: true,
       language: 'es',
-      autoclose: true
+      autoclose: true,
+      clearBtn: true,
+      orientation: 'bottom auto'
+    };
+
+    // Inicializar datepickers
+    $('#datepicker-desde').datepicker(commonConfig).on('changeDate', function(e) {
+      $('#datepicker-hasta').datepicker('setStartDate', e.date);
+    });
+
+    $('#datepicker-hasta').datepicker(commonConfig).on('changeDate', function(e) {
+      $('#datepicker-desde').datepicker('setEndDate', e.date);
+    });
+
+    $('#datepicker-comparacion-desde').datepicker(commonConfig).on('changeDate', function(e) {
+      $('#datepicker-comparacion-hasta').datepicker('setStartDate', e.date);
+    });
+
+    $('#datepicker-comparacion-hasta').datepicker(commonConfig).on('changeDate', function(e) {
+      $('#datepicker-comparacion-desde').datepicker('setEndDate', e.date);
     });
   });
 </script>

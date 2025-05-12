@@ -1,0 +1,163 @@
+html, body {
+    height: 100%; 
+    margin: 0;
+  }
+  
+  body {
+    background: rgb(0, 157, 255);
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .nav-link:hover {
+    background-color: black;
+    border-radius: 5px;
+    color: white !important;
+  }
+  
+  footer {
+    background: #fff;
+    padding: 1rem 0;
+    margin-top: 0;
+    width: 100%;
+  }
+  
+  footer .social a {
+    color: #333;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    transition: color 0.2s;
+  }
+  
+  footer .social a:hover {
+    color: #007bff;
+  }
+  
+  footer .footer-links a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.2s;
+  }
+  
+  footer .footer-links a:hover {
+    color: #007bff;
+  }
+  
+  .care-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+  }
+  
+  .care-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .care-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .care-box h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .care-box p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+  }
+  
+  .contact-container {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 200px); 
+  }
+  
+  .contact-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .contact-box p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .contact-box .note {
+    font-size: 14px;
+    color: #555;
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  main h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  main .d-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    width: 300px;
+  }
+  
+  main .d-flex a {
+    width: 100%;
+    text-align: center;
+  }
+  
+  main .btn {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  main .btn:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.05);
+  }
