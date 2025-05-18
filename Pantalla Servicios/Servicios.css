@@ -2,10 +2,11 @@
     --colorPrincipal: #32ade6;
     --colorSecundario: #181e21;
 }
-
-/*img{
-   max-width: 100%; La imagen nunca será más grande de lo que debe y estará al 100 cuando pueda
-}*/
+.nav-link:hover {
+  background-color: black;
+  border-radius: 5px;
+  color: white !important;
+}
 
 .datos{
     border: solid var(--colorSecundario);
@@ -26,3 +27,49 @@ article{
 main{
     padding: 10px;
 }
+  .form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 30px auto;
+  }
+  .btn-agendar {
+    background-color: #000;
+    color: #fff;
+  }
+  .alerta {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  .social-icons i {
+    font-size: 20px;
+    margin: 0 5px;
+    color: white;
+  }
+  footer {
+    background: #fff;
+    padding: 1rem 0;
+  }
+  footer .social a {
+    color: #333;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    transition: color .2s;
+  }
+  footer .social a:hover {
+    color: #007bff;
+  }
+  footer .footer-links a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 .5rem;
+    transition: color .2s;
+  }
+  footer .footer-links a:hover {
+    color: #007bff;
+  }
