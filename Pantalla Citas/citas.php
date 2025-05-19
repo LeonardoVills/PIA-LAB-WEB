@@ -25,7 +25,7 @@ if (empty($nombreCliente) || empty($edadCliente) || empty($celular) || empty($cu
 }
 
 // Conectar a SQL Server
-$serverName = "Laptop_Villa\\SQLEXPRESS,1433";
+$serverName = "LAPT-ACTII\\SQLEXPRESS,1433";
 $connectionInfo = [
     "Database" => "Fase3",
     "TrustServerCertificate" => true
