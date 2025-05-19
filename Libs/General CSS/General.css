@@ -9,12 +9,6 @@
     border-radius: 10px;
 }
 
-.navbar-nav a{
-    margin-right: 20px;
-    display: flex;
-    align-items: flex-end;
-}
-
 main{
     background-color:var(--colorPrincipal);
 }
