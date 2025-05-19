@@ -9,10 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 $nombre = trim($_POST['nuevoNombre'] ?? '');
 $clave = trim($_POST['nuevaContraseña'] ?? '');
 $idRol = intval($_POST['nuevoRolUsuario'] ?? 0);
-$horario = intval($_POST['nuevoHorario'] ?? 0); 
 
-
-if (empty($nombre) || empty($clave) || $idRol <= 0 || $horario <= 0) {
+if (empty($nombre) || empty($clave) || $idRol <= 0) {
     die("Faltan datos obligatorios o valores inválidos.");
 }
 
@@ -36,15 +34,8 @@ if ($rowRol['Total'] == 0) {
     die("El IdRol proporcionado no existe.");
 }
 
-$sqlHorario = "SELECT COUNT(*) AS Total FROM Horarios WHERE IdHora = ?";
-$stmtHorario = sqlsrv_query($conn, $sqlHorario, [$horario]);
-$rowHorario = sqlsrv_fetch_array($stmtHorario);
-if ($rowHorario['Total'] == 0) {
-    die("El IdHora proporcionado no existe.");
-}
-
-$sqlInsert = "INSERT INTO Usuarios (NombreUsuario, ClaveUsuario, IdRol, Horario) VALUES (?, ?, ?, ?)";
-$params = [$nombre, $claveHash, $idRol, $horario];
+$sqlInsert = "INSERT INTO Usuarios (NombreUsuario, ClaveUsuario, IdRol) VALUES (?, ?, ?)";
+$params = [$nombre, $claveHash, $idRol];
 $stmtInsert = sqlsrv_query($conn, $sqlInsert, $params);
 
 if ($stmtInsert === false) {
@@ -52,7 +43,6 @@ if ($stmtInsert === false) {
 }
 
 sqlsrv_free_stmt($stmtRol);
-sqlsrv_free_stmt($stmtHorario);
 sqlsrv_free_stmt($stmtInsert);
 sqlsrv_close($conn);
 
