@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Administrador-Expedientes</title>
+  <title>Modo Asistente</title>
   <!-- Tu CSS -->
   <link rel="stylesheet" href="estiloAdministradorExpedientes.css">
   <!-- Font Awesome para los iconos-->
@@ -49,10 +49,6 @@
       <aside class="col-md-3">
         <h5>Filtros Búsqueda:</h5>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="chkCitaHoy" checked>
-          <label class="form-check-label" for="chkCitaHoy">Asistió</label>
-        </div>
-        <div class="form-check">
           <input class="form-check-input" type="checkbox" id="chkLimpieza" checked>
           <label class="form-check-label" for="chkLimpieza">No Asistió</label>
         </div>
@@ -67,7 +63,11 @@
             <input type="text" class="form-control" placeholder="Añadir nuevos datos al expediente">
             <button class="btn btn-primary" type="button">Añadir</button>
           </div>
-          <button class="btn btn-dark mt-2">Expediente Completo</button>
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Asistió
+                </label>
         </div>
         <div class="mt-4">
           <h5>Expediente María Gomez</h5>
@@ -76,7 +76,11 @@
             <input type="text" class="form-control" placeholder="Añadir nuevos datos al expediente">
             <button class="btn btn-primary" type="button">Añadir</button>
           </div>
-          <button class="btn btn-dark mt-2">Expediente Completo</button>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Asistió
+                </label>
         </div>
       </section>
     </div>
