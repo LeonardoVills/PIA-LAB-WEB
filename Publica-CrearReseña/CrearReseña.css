@@ -1,7 +1,15 @@
+main{
+    
+}
+
+body{
+    background-color: #32ade6;
+}
+
 form {
-    width: 250px;
-    margin: 0 auto;
-    height: 50px;
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
 }
    
 form label {
@@ -29,14 +37,6 @@ label:hover,label:hover ~ label {
   
 input[type="radio"]:checked ~ label {
     color: orange;
-}
-
-
-
-
-#btnCrear{
-    background-color: var(--colorSecundario);
-    border-color: var(--colorSecundario);
 }
 
 #btnAqui{
@@ -79,4 +79,12 @@ footer .footer-links a {
 
 footer .footer-links a:hover {
     color: #007bff;
+}
+
+article {
+    padding: 1rem;
+    margin: auto;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 0.5rem;
 }
