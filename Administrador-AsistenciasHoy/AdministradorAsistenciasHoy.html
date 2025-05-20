@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CitasHoy</title>
+    <title>AsistenciasHoy</title>
     <link rel="stylesheet" href="../Libs/Bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../Libs/fontawesome-free-6.7.2-web/css/all.css">
-    <link rel="stylesheet" href="CitasHoy.css">
+    <link rel="stylesheet" href="AdministradorAsistenciasHoy.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Clínica</a>
+      <a class="navbar-brand" href="../Administrador_ModulosPantalla/Pantalla de Modulo Administrador.html"><i class="fa-solid fa-arrow-left"></i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -38,14 +38,24 @@
     </div>
   </nav>
 
-    <main>
-        <h1>Modo Secretario: Citas del Día</h1>
+  <main>
+        <h1>Modo Administrador: Asitencias del Día</h1>
         <article>
             <p>Cita 1: Nombre y Hora</p>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Asistió
+                </label>
         </article>
 
         <article>
             <p>Cita 2: Nombre y Hora</p>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Asistió
+                </label>
         </article>
 
 
@@ -71,7 +81,5 @@
       </div>
     </footer>
   </div>
-
-  <script src="../Libs/Bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 </html>
