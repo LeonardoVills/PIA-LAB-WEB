@@ -1,6 +1,10 @@
 <?php
 // Conexión con autenticación de Windows
+<<<<<<< HEAD
 $serverName = "Laptop_Villa\\SQLEXPRESS,1433";
+=======
+$serverName = "LAPT-ACTII\\SQLEXPRESS,1433";
+>>>>>>> 0db436c8f34557670c299b493dcd7f14f2811669
 $connectionOptions = [
     "Database" => "Fase3",
     "UID" => "",
@@ -18,21 +22,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['asistencias'])) {
         $asistio = ($valor == "1") ? 1 : 0;
         $sqlUpdate = "UPDATE Citas SET Asistió = ? WHERE IdCitas = ?";
         $params = [$asistio, $idCita];
+<<<<<<< HEAD
         $resultUpdate = sqlsrv_query($conn, $sqlUpdate, $params);
         if ($resultUpdate === false) {
             die("Error al actualizar asistencia: " . print_r(sqlsrv_errors(), true));
         }
+=======
+        sqlsrv_query($conn, $sqlUpdate, $params);
+>>>>>>> 0db436c8f34557670c299b493dcd7f14f2811669
     }
 }
 
 // Obtener las citas de hoy (después del POST también)
 $hoy = date("Y-m-d");
 $sql = "
+<<<<<<< HEAD
     SELECT c.IdCitas, h.HoraDisponible, cl.NombreCliente, c.Asistió
+=======
+    SELECT c.IdCitas, h.HorarioDisponible, cl.NombreCliente, c.Asistió
+>>>>>>> 0db436c8f34557670c299b493dcd7f14f2811669
     FROM Citas c
     INNER JOIN Clientes cl ON c.CURPCliente = cl.CURPCliente
     INNER JOIN Horarios h ON c.HoraSolicitada = h.IdHora
     WHERE c.Fecha = ? AND c.EstaAprobada = 1
+<<<<<<< HEAD
     ORDER BY h.HoraDisponible
 ";
 $stmt = sqlsrv_query($conn, $sql, [$hoy]);
@@ -40,6 +53,11 @@ $stmt = sqlsrv_query($conn, $sql, [$hoy]);
 if ($stmt === false) {
     die("Error en la consulta: " . print_r(sqlsrv_errors(), true));
 }
+=======
+    ORDER BY h.HorarioDisponible
+";
+$stmt = sqlsrv_query($conn, $sql, [$hoy]);
+>>>>>>> 0db436c8f34557670c299b493dcd7f14f2811669
 ?>
 
 <!DOCTYPE html>
@@ -52,6 +70,7 @@ if ($stmt === false) {
     <link rel="stylesheet" href="AdministradorAsistenciasHoy.css">
 </head>
 <body>
+<<<<<<< HEAD
   
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -81,15 +100,24 @@ if ($stmt === false) {
       </div>
     </div>
 </nav>
+=======
+>>>>>>> 0db436c8f34557670c299b493dcd7f14f2811669
     <main class="container my-4">
         <h1 class="text-center mb-4">Modo Administrador: Asistencias del Día</h1>
         <form method="POST">
             <?php while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)): ?>
               <article class="d-flex align-items-center justify-content-between border p-3 mb-2 rounded">
                   <p class="mb-0 fw-bold">
+<<<<<<< HEAD
                       <?= htmlspecialchars($row['NombreCliente']) ?> - <?= $row['HoraDisponible']->format('H:i') ?> hrs
                   </p>
                   <div class="form-check">
+=======
+                      <?= htmlspecialchars($row['NombreCliente']) ?> - <?= $row['HorarioDisponible']->format('H:i') ?> hrs
+                  </p>
+                  <div class="form-check">
+                      <!-- input oculto para garantizar envío de "0" si no se marca -->
+>>>>>>> 0db436c8f34557670c299b493dcd7f14f2811669
                       <input type="hidden" name="asistencias[<?= $row['IdCitas'] ?>]" value="0">
                       <input class="form-check-input" type="checkbox"
                           name="asistencias[<?= $row['IdCitas'] ?>]"
@@ -107,7 +135,12 @@ if ($stmt === false) {
         </form>
     </main>
 
+<<<<<<< HEAD
    <footer>
+=======
+  </div>
+    <footer>
+>>>>>>> 0db436c8f34557670c299b493dcd7f14f2811669
       <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
         <div class="social mb-2 mb-md-0">
           <a href="#"><i class="fab fa-x"></i></a>
@@ -125,5 +158,11 @@ if ($stmt === false) {
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
 </body>
 </html>
+=======
+  </div>
+</body>
+</html>
+>>>>>>> 0db436c8f34557670c299b493dcd7f14f2811669
