@@ -4,28 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Modo Administrador: Horarios y Días</title>
-
-  <link rel="stylesheet" href="../Libs/fontawesome-free-6.7.2-web/css/all.min.css"> 
-  <link rel="stylesheet" href="../Libs/Bootstrap/bootstrap.min.css"> 
-
+ 
+  <link rel="stylesheet" href="../Libs/fontawesome-free-6.7.2-web/css/all.min.css">
+  <link rel="stylesheet" href="../Libs/Bootstrap/bootstrap.min.css">
+ 
   <link rel="stylesheet" href="estilosAdministardorHorarioyDia.css">
-
+ 
   <style>
     html, body {
       height: 100%;
     }
-
+ 
     body {
       display: flex;
       flex-direction: column;
     }
-
+ 
     .main-content {
       flex: 1;
     }
   </style>
 </head>
-
+ 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -56,13 +56,13 @@
       </div>
     </div>
   </nav>
-
+ 
   <div class="main-content">
     <div class="container">
       <h3 class="text-center mb-4">Modo Administrador: Horarios y Días</h3>
-
+ 
       <div class="row">
-      
+     
         <div class="col-md-6">
           <div class="d-flex flex-column gap-3">
             <div class="d-flex">
@@ -89,28 +89,28 @@
               <button class="btn btn-danger me-2">Eliminar</button>
               <input type="text" class="form-control" value="11:20 AM" readonly>
             </div>
-
+ 
             <div class="d-flex mt-3">
               <input type="text" class="form-control" placeholder="Nuevo Horario">
               <button class="btn btn-dark ms-2">Añadir</button>
             </div>
-
+ 
             <button class="btn btn-dark mt-3" style="margin-top: 30px; margin-left: 40px;">Modificar Horarios Existentes</button>
           </div>
         </div>
-
+ 
         <div class="col-md-6 d-flex justify-content-center">
           <div class="d-flex flex-column align-items-center text-center">
             <button id="modificar-dias-btn" class="btn btn-dark mb-4">Modificar Días</button>
             <div id="datepicker" class="mb-5"></div>
-
+ 
             <button class="btn btn-dark mt-4">Guardar Cambios</button>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+ 
   <footer class="mt-5 border-top pt-4 pb-3 bg-light">  
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">  
       <div class="social mb-3 mb-md-0">  
@@ -129,16 +129,16 @@
       </div>  
     </div>  
   </footer>  
-
-
+ 
+ 
   <script src="../Libs/Bootstrap/bootstrap.bundle.min.js"></script>
-
-
+ 
+ 
   <script src="../Libs/Jquery/jquery-3.7.1.min.js"></script>
-
+ 
   <script src="../Libs/Bootstrap/bootstrap-datepicker.min.js"></script>
   <script src="../Libs/Bootstrap/bootstrap-datepicker.es.min.js"></script>
-
+ 
   <script>
     $(document).ready(function () {
       $('#datepicker').datepicker({
@@ -151,3 +151,9 @@
   </script>
 </body>
 </html>
+ 
+ 
+INSERT INTO [Fase3].[dbo].[Roles] (NombreRol)
+
+VALUES ('Administrador');
+ 

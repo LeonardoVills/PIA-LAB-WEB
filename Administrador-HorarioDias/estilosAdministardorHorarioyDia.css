@@ -36,3 +36,15 @@ footer .footer-links a {
 footer .footer-links a:hover {
   color: #007bff;
 }
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-content {
+      flex: 1;
+    }
