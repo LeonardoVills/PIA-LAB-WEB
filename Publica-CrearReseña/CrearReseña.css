@@ -1,10 +1,10 @@
-#form {
+form {
     width: 250px;
     margin: 0 auto;
     height: 50px;
 }
    
-#form label {
+form label {
     font-size: 20px;
 }
   
@@ -31,39 +31,8 @@ input[type="radio"]:checked ~ label {
     color: orange;
 }
 
-article{
-    margin: auto;
-    width: 50%;
-    padding: 2%;
-    background-color: white;
-    border-radius: 12px;
-    margin-bottom: 10px;
-    display: flex;
-}
 
-main{
-    padding-top: 7%;
-    padding-bottom: 2%;
-}
 
-#R1{
-    margin-inline-start: auto;
-    margin-right: 5%;
-    width: auto;
-}
-
-#R2{
-    margin-inline-end: auto;
-    width: auto;
-    margin-left: 5%;
-}
-
-#R1,#R2{
-    display:inline-block;
-    border: 2px solid var(--colorSecundario);
-    padding: 2%;
-    border-radius: 12px;
-}
 
 #btnCrear{
     background-color: var(--colorSecundario);
