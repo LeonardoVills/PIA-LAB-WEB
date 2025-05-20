@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Conexión a la base de datos
-$serverName = "LAPT-ACTII\\SQLEXPRESS,1433";
+$serverName = "Laptop_Villa\\SQLEXPRESS,1433";
 $connectionInfo = [
     "Database" => "Fase3",
     "TrustServerCertificate" => true
@@ -64,7 +64,7 @@ sqlsrv_close($conn);
               <li class="nav-item"><a class="nav-link" href="../Publico-Cuidado/Pantalla Cuidados.html">Cuidado y Consejos</a></li>
               <li class="nav-item"><a class="nav-link active" href="../Publico-Servicios/Servicios.html">Servicios</a></li>
               <li class="nav-item"><a class="nav-link" href="../Publico-Citas/Pantalla citas.html">Citas</a></li>
-              <li class="nav-item"><a class="nav-link" href="../Publico-Reseñas/Reseñas.html">Reseñas</a></li>
+              <li class="nav-item"><a class="nav-link" href="../Publico-Reseñas/Reseñas.php">Reseñas</a></li>
             </ul>
           </div>
           <div class="d-flex justify-content-end">

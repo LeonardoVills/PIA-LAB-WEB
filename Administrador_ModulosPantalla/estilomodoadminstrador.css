@@ -86,7 +86,7 @@ html, body {
   }
   
   .contact-container {
-    flex: 1; /* Permite que el contenedor principal ocupe el espacio restante */
+    flex: 1; 
     display: flex;
     justify-content: center;
     align-items: center;

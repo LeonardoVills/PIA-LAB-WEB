@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Conexión a la base de datos
-$serverName = "LAPT-ACTII\\SQLEXPRESS,1433";
+$serverName = "Laptop_Villa\\SQLEXPRESS,1433";
 $connectionInfo = [
     "Database" => "Fase3",
     "TrustServerCertificate" => true

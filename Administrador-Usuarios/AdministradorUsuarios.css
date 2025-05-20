@@ -65,3 +65,98 @@ footer .footer-links a {
 footer .footer-links a:hover {
   color: #007bff;
 }
+nav.navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1030;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    main {
+      margin-top: 70px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1rem;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 8px 10px;
+      margin: 0.4rem 0 1rem 0;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    input[type="text"]:focus,
+    select:focus {
+      border-color: #333;
+      outline: none;
+      box-shadow: 0 0 8px rgba(10, 10, 10, 0.5);
+    }
+
+    article {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      padding: 1.2rem 1.5rem 3.5rem 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      position: relative;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      color: #222;
+    }
+
+    button[name="eliminar[]"] {
+      position: absolute;
+      bottom: 1rem;
+      right: 1.5rem;
+      background-color:rgb(8, 7, 8);
+      color: white;
+      border: none;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(7, 6, 6, 0.4);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    button[name="eliminar[]"]:hover {
+      background-color:rgb(13, 12, 12);
+      box-shadow: 0 4px 8px rgba(13, 12, 12, 0.6);
+    }
+
+    button[type="submit"][name="guardar"] {
+      display: block;
+      margin: 2rem auto 3rem auto;
+      background-color:rgb(12, 13, 13);
+      color: white;
+      font-size: 1.2rem;
+      padding: 0.6rem 2rem;
+      border-radius: 8px;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(15, 15, 16, 0.6);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    button[type="submit"][name="guardar"]:hover {
+      background-color:rgb(12, 12, 12);
+      box-shadow: 0 6px 14px rgba(0,86,179,0.7);
+    }

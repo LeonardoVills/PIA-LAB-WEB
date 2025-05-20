@@ -179,8 +179,6 @@ html, body {
   .comment-details .switch input:checked + .slider:before {
     transform: translateX(14px);
   }
-
-  /* Estilo para el contenedor principal */
   .service-admin-container {
     display: flex;
     flex-direction: column;
@@ -193,7 +191,6 @@ html, body {
     margin-top: 20px;
   }
   
-  /* Estilo para el formulario */
   .service-form {
     width: 100%;
     display: flex;

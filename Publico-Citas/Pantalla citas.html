@@ -28,9 +28,9 @@
               <li class="nav-item"><a class="nav-link" aria-current="page" href="../Publico-Inicio/Index.html">Principal</a></li>
               <li class="nav-item"><a class="nav-link" href="../Publico-Nosotros/Pantalla Nosotros.html">Nosotros</a></li>
               <li class="nav-item"><a class="nav-link" href="../Publico-Cuidado/Pantalla Cuidados.html">Cuidado y Consejos</a></li>
-              <li class="nav-item"><a class="nav-link" href="../Publico-Servicios/Servicios.html">Servicios</a></li>
+              <li class="nav-item"><a class="nav-link" href="../Publico-Servicios/Servicios.php">Servicios</a></li>
               <li class="nav-item"><a class="nav-link active" href="../Publico-Citas/Pantalla citas.html">Citas</a></li>
-              <li class="nav-item"><a class="nav-link" href="../Publico-Reseñas/Reseñas.html">Reseñas</a></li>
+              <li class="nav-item"><a class="nav-link" href="../Publico-Reseñas/Reseñas.php">Reseñas</a></li>
             </ul>
           </div>
           <div class="d-flex justify-content-end">
@@ -61,10 +61,11 @@
     <div class="mb-3">
       <label class="form-label">Servicio de Interés</label>
       <select class="form-select" name="servicio" required>
-        <option selected disabled value="">Seleccione el servicio que guste</option>
-        <option value="Consulta General">Consulta General</option>
-        <option value="Limpieza Dental">Limpieza Dental</option>
-        <option value="Ortodoncia">Ortodoncia</option>
+  <option selected disabled value="">Seleccione el servicio que guste</option>
+  <option value="1005">Consulta General</option>
+  <option value="1004">Limpieza Dental</option>
+  <option value="1003">Ortodoncia</option>
+</select>
       </select>
     </div>
     <div class="row mb-3">
@@ -76,9 +77,21 @@
         <label class="form-label">Hora Solicitada</label>
         <select class="form-select" name="hora" required>
           <option selected disabled value="">Elija su horario de preferencia</option>
-          <option value="10:00 AM">10:00 AM</option>
-          <option value="12:00 PM">12:00 PM</option>
-          <option value="4:00 PM">4:00 PM</option>
+  <option value="1">07:00</option>
+  <option value="2">08:00</option>
+  <option value="3">09:00</option>
+  <option value="4">10:00</option>
+  <option value="5">11:00</option>
+  <option value="6">12:00</option>
+  <option value="7">13:00</option>
+  <option value="8">14:00</option>
+  <option value="9">15:00</option>
+  <option value="10">16:00</option>
+  <option value="11">17:00</option>
+  <option value="12">18:00</option>
+  <option value="13">19:00</option>
+  <option value="14">20:00</option>
+</select>
         </select>
       </div>
     </div>
@@ -121,6 +134,7 @@
     </div>  
   </div>  
 </footer>  
+
 <script src="PantallaCitas.js"></script>
   <script src="../Libs/Bootstrap/bootstrap.bundle.min.js"></script>
   <script src="../Libs/Jquery/jquery-3.7.1.min.js"></script>
