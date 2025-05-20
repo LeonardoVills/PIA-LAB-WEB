@@ -90,7 +90,7 @@ sqlsrv_close($conn);
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="../Administrador_ModulosPantalla/Pantalla de Modulo Administrador.html"><i class="fa-solid fa-arrow-left"></i></a>
+     <a class="navbar-brand" href="../Doctor-ModuloPantalla/Pantalla Modo Doctor.html"><i class="fa-solid fa-arrow-left"></i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -101,9 +101,9 @@ sqlsrv_close($conn);
               <li class="nav-item"><a class="nav-link" aria-current="page" href="../Publico-Inicio/Index.html">Principal</a></li>
               <li class="nav-item"><a class="nav-link" href="../Publico-Nosotros/Pantalla Nosotros.html">Nosotros</a></li>
               <li class="nav-item"><a class="nav-link" href="../Publico-Cuidado/Pantalla Cuidados.html">Cuidado y Consejos</a></li>
-              <li class="nav-item"><a class="nav-link" href="../Publico-Servicios/Servicios.html">Servicios</a></li>
+              <li class="nav-item"><a class="nav-link" href="../Publico-Servicios/Servicios.php">Servicios</a></li>
               <li class="nav-item"><a class="nav-link" href="../Publico-Citas/Pantalla citas.html">Citas</a></li>
-              <li class="nav-item"><a class="nav-link" href="../Publico-Reseñas/Reseñas.html">Reseñas</a></li>
+              <li class="nav-item"><a class="nav-link" href="../Publico-Reseñas/Reseñas.php">Reseñas</a></li>
             </ul>
           </div>
           <div class="d-flex justify-content-end">
