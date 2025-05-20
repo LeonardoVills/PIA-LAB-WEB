@@ -1,6 +1,29 @@
+<?php
+$serverName = "Laptop_Villa\\SQLEXPRESS,1433";
+$connectionOptions = [
+    "Database" => "Fase3",
+    "TrustServerCertificate" => true,
+    "CharacterSet" => "UTF-8"
+];
+
+$conn = sqlsrv_connect($serverName, $connectionOptions);
+if (!$conn) {
+    die(print_r(sqlsrv_errors(), true));
+}
+
+$expedientes = [];
+$sql = "SELECT NombrePaciente, InformacionPaciente FROM Expediente";
+$stmt = sqlsrv_query($conn, $sql);
+if ($stmt !== false) {
+    while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+        $expedientes[] = $row;
+    }
+}
+sqlsrv_close($conn);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,20 +32,18 @@
   <link rel="stylesheet" href="../Libs/fontawesome-free-6.7.2-web/css/all.min.css"> 
   <link rel="stylesheet" href="../Libs/Bootstrap/bootstrap.min.css">
 </head>
-
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="../Administrador_ModulosPantalla/Pantalla de Modulo Administrador.html"><i class="fa-solid fa-arrow-left"></i></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="d-flex w-100">
           <div class="d-flex justify-content-center flex-grow-1">
             <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item"><a class="nav-link" aria-current="page" href="../Publico-Inicio/Index.html">Principal</a></li>
+              <li class="nav-item"><a class="nav-link" href="../Publico-Inicio/Index.html">Principal</a></li>
               <li class="nav-item"><a class="nav-link" href="../Publico-Nosotros/Pantalla Nosotros.html">Nosotros</a></li>
               <li class="nav-item"><a class="nav-link" href="../Publico-Cuidado/Pantalla Cuidados.html">Cuidado y Consejos</a></li>
               <li class="nav-item"><a class="nav-link" href="../Publico-Servicios/Servicios.html">Servicios</a></li>
@@ -63,24 +84,17 @@
       </aside>
       <section class="col-md-9">
         <h2>Modo Administrador: Expedientes</h2>
-        <div class="mt-4">
-          <h5>Expediente Jose Perez</h5>
-          <textarea class="form-control" rows="4" placeholder="Toda la información del paciente"></textarea>
-          <div class="input-group mt-2">
-            <input type="text" class="form-control" placeholder="Añadir nuevos datos al expediente">
-            <button class="btn btn-primary" type="button">Añadir</button>
+        <?php foreach ($expedientes as $exp): ?>
+          <div class="mt-4">
+            <h5>Expediente <?= htmlspecialchars($exp['NombrePaciente']) ?></h5>
+            <textarea class="form-control" rows="4" readonly><?= htmlspecialchars($exp['InformacionPaciente']) ?></textarea>
+            <div class="input-group mt-2">
+              <input type="text" class="form-control" placeholder="Añadir nuevos datos al expediente">
+              <button class="btn btn-primary" type="button">Añadir</button>
+            </div>
+            <button class="btn btn-dark mt-2">Expediente Completo</button>
           </div>
-          <button class="btn btn-dark mt-2">Expediente Completo</button>
-        </div>
-        <div class="mt-4">
-          <h5>Expediente María Gomez</h5>
-          <textarea class="form-control" rows="4" placeholder="Toda la información del paciente"></textarea>
-          <div class="input-group mt-2">
-            <input type="text" class="form-control" placeholder="Añadir nuevos datos al expediente">
-            <button class="btn btn-primary" type="button">Añadir</button>
-          </div>
-          <button class="btn btn-dark mt-2">Expediente Completo</button>
-        </div>
+        <?php endforeach; ?>
       </section>
     </div>
   </main>
@@ -104,5 +118,4 @@
   </footer>
   <script src="../Libs/Bootstrap/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
