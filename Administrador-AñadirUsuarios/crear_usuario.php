@@ -2,8 +2,11 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+header('Content-Type: application/json');
+
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    die("Método no permitido.");
+    echo json_encode(['success' => false, 'message' => 'Método no permitido.']);
+    exit();
 }
 
 $nombre = trim($_POST['nuevoNombre'] ?? '');
@@ -11,10 +14,9 @@ $clave = trim($_POST['nuevaContraseña'] ?? '');
 $idRol = intval($_POST['nuevoRolUsuario'] ?? 0);
 
 if (empty($nombre) || empty($clave) || $idRol <= 0) {
-    die("Faltan datos obligatorios o valores inválidos.");
+    echo json_encode(['success' => false, 'message' => 'Faltan datos obligatorios o valores inválidos.']);
+    exit();
 }
-
-$claveHash = password_hash($clave, PASSWORD_DEFAULT);
 
 $serverName = "Laptop_Villa\\SQLEXPRESS,1433";
 $connectionInfo = [
@@ -24,28 +26,39 @@ $connectionInfo = [
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 if (!$conn) {
-    die("Error de conexión con la base de datos: " . print_r(sqlsrv_errors(), true));
+    echo json_encode(['success' => false, 'message' => 'Error de conexión con la base de datos.']);
+    exit();
 }
-
 $sqlRol = "SELECT COUNT(*) AS Total FROM Roles WHERE IdRol = ?";
 $stmtRol = sqlsrv_query($conn, $sqlRol, [$idRol]);
-$rowRol = sqlsrv_fetch_array($stmtRol);
+$rowRol = sqlsrv_fetch_array($stmtRol, SQLSRV_FETCH_ASSOC);
 if ($rowRol['Total'] == 0) {
-    die("El IdRol proporcionado no existe.");
+    echo json_encode(['success' => false, 'message' => 'El IdRol proporcionado no existe.']);
+    exit();
 }
+$sqlCheckUser = "SELECT COUNT(*) AS Total FROM Usuarios WHERE NombreUsuario = ?";
+$stmtCheckUser = sqlsrv_query($conn, $sqlCheckUser, [$nombre]);
+$rowCheckUser = sqlsrv_fetch_array($stmtCheckUser, SQLSRV_FETCH_ASSOC);
 
+if ($rowCheckUser['Total'] > 0) {
+    echo json_encode(['success' => false, 'message' => "El nombre de usuario \"$nombre\" ya existe. Por favor elige otro."]);
+    exit();
+}
 $sqlInsert = "INSERT INTO Usuarios (NombreUsuario, ClaveUsuario, IdRol) VALUES (?, ?, ?)";
-$params = [$nombre, $claveHash, $idRol];
+$params = [$nombre, $clave, $idRol];  
 $stmtInsert = sqlsrv_query($conn, $sqlInsert, $params);
 
 if ($stmtInsert === false) {
-    die("Error al insertar en la base de datos: " . print_r(sqlsrv_errors(), true));
+    echo json_encode(['success' => false, 'message' => 'Error al insertar en la base de datos.']);
+    exit();
 }
 
 sqlsrv_free_stmt($stmtRol);
+sqlsrv_free_stmt($stmtCheckUser);
 sqlsrv_free_stmt($stmtInsert);
 sqlsrv_close($conn);
 
-echo "<h2>✅ Usuario creado exitosamente.</h2>";
-echo "<a href='añadir_usuario.html'>Volver</a>";
+echo json_encode(['success' => true, 'message' => 'Usuario creado exitosamente.']);
+exit();
+
 ?>

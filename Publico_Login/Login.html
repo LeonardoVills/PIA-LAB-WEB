@@ -28,7 +28,7 @@
         <div class="d-flex w-100">
           <div class="d-flex justify-content-center flex-grow-1">
             <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item"><a class="nav-link" aria-current="page" href="../Publico-Inicio/Index.html">Principal</a></li>
+              <li class="nav-item"><a class="nav-link" href="../Publico-Inicio/Index.html">Principal</a></li>
               <li class="nav-item"><a class="nav-link" href="../Publico-Nosotros/Pantalla Nosotros.html">Nosotros</a></li>
               <li class="nav-item"><a class="nav-link" href="../Publico-Cuidado/Pantalla Cuidados.html">Cuidado y Consejos</a></li>
               <li class="nav-item"><a class="nav-link" href="../Publico-Servicios/Servicios.html">Servicios</a></li>
@@ -39,7 +39,7 @@
           <div class="d-flex justify-content-end">
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item"><a class="nav-link" href="../Publico-Contacto/Pantalla Contacto.html">Contacto</a></li>
-              <li class="nav-item"><a class="nav-link active" href="../Publico_Login/Login.html">Empleados</a></li>
+              <li class="nav-item"><a class="nav-link active" href="Login.html">Empleados</a></li>
             </ul>
           </div>
         </div>
@@ -49,14 +49,16 @@
 
   <section class="hero">
     <div class="login-card">
-      <form>
+      <form method="POST" action="validar_login.php">
         <div class="mb-4">
           <label for="usuario" class="form-label">Usuario</label>
           <input
             type="text"
             id="usuario"
+            name="usuario"
             class="form-control"
             placeholder="Usuario"
+            required
           />
         </div>
         <div class="mb-4">
@@ -64,8 +66,10 @@
           <input
             type="password"
             id="contrasena"
+            name="contrasena"
             class="form-control"
             placeholder="••••••••"
+            required
           />
         </div>
         <button type="submit" class="btn btn-dark w-100">
@@ -74,6 +78,7 @@
       </form>
     </div>
   </section>
+
   <footer>
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
       <div class="social mb-3 mb-md-0">
