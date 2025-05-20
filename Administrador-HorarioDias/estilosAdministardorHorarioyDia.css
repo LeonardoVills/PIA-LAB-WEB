@@ -1,50 +1,124 @@
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+.main-content {
+  flex: 1;
+}
+
 #datepicker {
   transform: scale(1.15);
   transform-origin: top center;
-  display: inline-block;
+  display: block;
+  margin: 1rem auto;
+  cursor: pointer;
+  background-color: #fff;
 }
-
 
 #modificar-dias-btn {
   margin-bottom: 1.5rem;
   transform: translateX(-15px);
 }
-.nav-link:hover {
-  background-color: black;
-  border-radius: 5px;
-  color: white !important;
-}
+
 footer {
   background: #fff;
   padding: 1rem 0;
 }
+
 footer .social a {
   color: #333;
   font-size: 1.25rem;
   margin-right: 1rem;
   transition: color .2s;
 }
+
 footer .social a:hover {
   color: #007bff;
 }
+
 footer .footer-links a {
   color: #555;
   text-decoration: none;
   margin: 0 .5rem;
   transition: color .2s;
 }
+
 footer .footer-links a:hover {
   color: #007bff;
 }
-    html, body {
-      height: 100%;
-    }
 
-    body {
-      display: flex;
-      flex-direction: column;
-    }
+/* Contenedor general de la configuración */
+.configuracion-admin {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: #f8f9fa;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
 
-    .main-content {
-      flex: 1;
-    }
+/* Horarios disponibles en columnas pequeñas */
+.horario-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+.horario-item span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+}
+
+/* Espacio visual entre los horarios */
+.horarios-lista {
+  margin-bottom: 2rem;
+}
+
+/* Día no disponible visual */
+.dia-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+/* Ajustar botones de añadir/modificar */
+form.d-flex.mt-3 {
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  white-space: nowrap;
+}
+
+/* Botón inferior de guardar */
+button.btn-dark.mt-4 {
+  display: block;
+  margin: 2rem auto 0 auto;
+}
+
+/* Responsive por si se usa en móviles */
+@media (max-width: 576px) {
+  .horario-item, .dia-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
